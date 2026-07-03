@@ -1,0 +1,52 @@
+.portfolio {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100svh;
+}
+
+.navbar {
+  display: grid;
+  grid-template-areas:
+    "logo nav switch";
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  grid-gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.logo {
+  grid-area: logo;
+  max-width: max-content;
+}
+
+.navList {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-area: nav;
+  justify-content: center;
+  gap: 16px;
+}
+
+.switchContainer {
+  grid-area: switch;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    grid-template-areas:
+      "logo logo"
+      "nav switch";
+    padding: 16px;
+  }
+
+  .logo {
+    justify-self: center;
+  }
+
+  .switchContainer {
+    justify-self: end;
+  }
+
+}
