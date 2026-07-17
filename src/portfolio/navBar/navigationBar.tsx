@@ -5,7 +5,7 @@ import styles from './navigationBar.module.css'
 export function NavigationBar({ isDark, setIsDark }: { isDark: boolean, setIsDark: (next: boolean) => void }) {
   return (
     <div className={styles.navbar}>
-      <h2 className={styles.logo}>Tomas Leshonok</h2>
+      <h2 className={styles.logo}>Thomas Leshonok</h2>
       <NavigationMenu>
         <NavigationMenuList className={styles.navList}>
           <NavigationMenuItem>

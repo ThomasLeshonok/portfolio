@@ -1,13 +1,7 @@
 import styles from '../portfolio/portfolio.module.css'
-import { NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-} from '@/components/ui/navigation-menu'
 import { useEffect, useState } from 'react'
-// import { Switch } from "@/components/ui/switch"
-import {ThemeToggle} from "@/functions/ThemeSwitch"
 import {NavigationBar} from './navBar/navigationBar'
+import { BriefIntroduction } from './briefIntro/briefIntroduction'
 
 function getInitialTheme(): boolean {
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -16,22 +10,26 @@ function getInitialTheme(): boolean {
 export function Portfolio() {
   const [isDark, setIsDark] = useState(getInitialTheme);
 
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-color-scheme: dark)');
-    const handler = (e: MediaQueryListEvent) => setIsDark(e.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', isDark);
-  }, [isDark]);
+  // useEffect(() => {
+  //   const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  //   const handler = (e: MediaQueryListEvent) => setIsDark(e.matches);
+  //   mq.addEventListener('change', handler);
+  //   return () => mq.removeEventListener('change', handler);
+  // }, []);
   
   return (
     <div className={styles.portfolio}>
-      <NavigationBar 
-          isDark={isDark} 
-          setIsDark={setIsDark} />
+      <header className={styles.header}>
+        <NavigationBar 
+            isDark={isDark} 
+            setIsDark={setIsDark} />
+      </header>
+      <div className={styles.content}>
+        <BriefIntroduction />
+        <section id="projects" className={styles.projectsSection}>
+          <h2>Projects</h2>
+        </section>
+      </div>
     </div>
   )
 }
