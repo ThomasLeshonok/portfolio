@@ -5,6 +5,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Archi';
+  src: url(/components/fonts/Archivo-VariableFont_wdth\,wght.ttf) format('truetype');
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -92,6 +97,13 @@
   --sidebar-border: oklch(0.922 0 0);
 
   --sidebar-ring: oklch(0.708 0 0);
+
+  --color-white: #fff;
+  --color-gray: #8E5BE3;
+  --color-black: #000;
+  --color-purple: #FF00CC;
+  --color-light-purple: #C62DD7;
+  --color-light-blue: #399FF4;
 
   @media (max-width: 1024px) {
     font-size: 16px;
