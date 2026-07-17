@@ -1,0 +1,61 @@
+.briefSection {
+  max-width: 700px;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  padding: 0 20px;
+}
+
+.title {
+  font-weight: 500;
+  color: #00ccff;
+}
+
+.name {
+  font-size: clamp(40px, 5vw, 80px);
+  color: var(--text-h);
+}
+
+.subtitle {
+  max-width: 540px;
+  font-size: 0.9rem;
+  padding-top: 20px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 30%
+  }
+
+  50% {
+    background-position: 100% 60%
+  }
+
+  to {
+    background-position: 0 30%
+  }
+}
+
+.quote {
+  font-family: Archi, sans-serif;
+  font-size: clamp(35px, 2vw, 80px);
+}
+
+.quote_gradient {
+  font-weight: 800;
+  background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+}
+
+@media (max-width: 480px) {
+  .briefSection {
+    padding: 0 5px;
+  }
+}
