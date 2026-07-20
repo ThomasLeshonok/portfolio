@@ -1,0 +1,32 @@
+.aboutSection {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.title {
+  font-size: clamp(30px, 1vw, 80px);
+  font-weight: 500;
+  color: #06DF82;
+  text-align: center;
+}
+
+.subtitle {
+  max-width: 540px;
+  font-size: 0.9rem;
+  padding-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding-top: 60px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

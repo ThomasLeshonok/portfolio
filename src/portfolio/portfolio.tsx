@@ -2,6 +2,7 @@ import styles from '../portfolio/portfolio.module.css'
 import { useEffect, useState } from 'react'
 import {NavigationBar} from './navBar/navigationBar'
 import { BriefIntroduction } from './briefIntro/briefIntroduction'
+import { AboutSection } from './aboutSection/aboutSection';
 
 function getInitialTheme(): boolean {
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -26,6 +27,7 @@ export function Portfolio() {
       </header>
       <div className={styles.content}>
         <BriefIntroduction />
+        <AboutSection />
         <section id="projects" className={styles.projectsSection}>
           <h2>Projects</h2>
         </section>
